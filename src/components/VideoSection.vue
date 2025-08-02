@@ -164,6 +164,83 @@ const prevVideo = () => {
 }
 
 
+@media (max-width: 2561px) {
+    .fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.6s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+
+
+.video-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.up {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 100px 120px;
+    color: white;
+
+}
+
+.large-text {
+    flex: 1;
+    text-align: left;
+    display: flex;
+    align-items: flex-end;
+    /* Align text to the bottom */
+}
+
+.large-text h1 {
+    font-size: 90px;
+    line-height: 1.3;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0;
+    /* Remove bottom margin for perfect alignment */
+}
+
+.carousel-arrows {
+    display: flex;
+    gap: 16px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* Align buttons to the bottom */
+    height: 100%;
+    padding: 30px;
+    /* Ensure full height for alignment */
+}
+
+.arrow-button {
+    all: unset;
+    width: 50px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+/* 1440px */
+
+
+}
 @media (max-width: 1440px) {
     .up {
         padding: 80px 100px;
