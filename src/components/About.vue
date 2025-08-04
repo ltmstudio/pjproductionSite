@@ -1,7 +1,7 @@
 <template>
     <section id="about" class="about-section">
         <div class="main-text">
-            <h1>ВИДЕО. ФОТО. SMM. <br>ПРОДВИЖЕНИЕ</h1>
+            <h2>ВИДЕО. ФОТО. SMM. <br>ПРОДВИЖЕНИЕ</h2>
         </div>
 
         <div class="text-row">
@@ -43,10 +43,10 @@
 
 .main-text {
     margin-bottom: 40px;
-    padding-left: 120px;
+   
 }
 
-.main-text h1 {
+.main-text h2 {
     font-size: 90px;
     font-weight: 700;
     line-height: 1.1;
@@ -72,6 +72,7 @@
     color: #bdbdbd;
     line-height: 1.6;
     letter-spacing: 0.05em;
+    padding-top: 20px;
 }
 
 .right-text {
@@ -80,11 +81,13 @@
     font-size: 21px;
     line-height: 1.8;
     letter-spacing: 0.01em;
+    padding-left: 50px;
 }
 
 
 @media (max-width: 2561px) {
     .about-section {
+        height:auto;
     display: flex;
     flex-direction: column;
     padding: 80px 5%;
@@ -96,10 +99,10 @@
 
 .main-text {
     margin-bottom: 40px;
-    padding-left: 120px;
+   
 }
 
-.main-text h1 {
+.main-text h2 {
     font-size: 90px;
     font-weight: 700;
     line-height: 1.1;
@@ -125,7 +128,7 @@
     color: #bdbdbd;
     line-height: 1.6;
     letter-spacing: 0.05em;
-    padding-left: 150px;
+ 
 }
 
 .right-text {
@@ -139,53 +142,59 @@
 }
 
 @media (max-width: 1440px) {
-    .main-text h1 {
+    .main-text h2 {
         font-size: 70px;
         
     }
 }
 
 @media (max-width: 1024px) {
-    .main-text {
-    margin-bottom: 40px;
-    padding-left: 20px;
+  .main-text {
+    margin-bottom: 10px;
+   
+  }
+
+  .main-text h2 {
+    font-size: 54px;
+    padding-left: 0;
+  }
+
+  .text-row {
+    flex-direction: column;
+    gap: 32px;
+    padding: 0;
+    margin: 0; /* убираем auto */
+  }
+
+  .left-text,
+  .right-text {
+    max-width: 100%;
+    flex: initial; 
+   /* добавляем чтобы выровнять по левому краю */
+    padding-right: 20px;
+  }
+
+  .left-text {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding-top: 0;
+  }
+
+  .right-text {
+    font-size: 16px;
+    padding-left: 0;
+  }
 }
 
-.main-text h1 {
-        font-size: 54px;
-        padding-left: 0;
-    }
 
-
-    .text-row {
-        flex-direction: column;
-        gap: 32px;
-        padding: 0;
-    }
-
-    .left-text,
-    .right-text {
-        max-width: 100%;
-        flex: initial; 
-    }
-
-    .left-text {
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-
-    .right-text {
-        font-size: 16px;
-    }
-}
 @media (max-width: 768px) {
-    .main-text h1 {
+    .main-text h2 {
         font-size: 36px;
         padding-left: 0;
     }
 }
 @media (max-width: 480px) {
-    .main-text h1 {
+    .main-text h2 {
         font-size: 22px;
         padding-left: 0;
     }

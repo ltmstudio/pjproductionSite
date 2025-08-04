@@ -1,7 +1,7 @@
 <template>
     <section id="work" class="work-section">
         <div class="work-title">
-            <h1>НАШИ РАБОТЫ</h1>
+            <h3>НАШИ РАБОТЫ</h3>
         </div>
 
         <div class="work-grid">
@@ -21,18 +21,19 @@
 
 <style scoped>
 .work-section {
-    padding: 100px 5% 80px;
+    padding: 80px 5% 80px 5%;
     background-color: #000;
     text-align: center;
     color: white;
     font-family: 'Montserrat', sans-serif;
 }
 
-.work-title h1 {
+.work-title h3 {
     font-size: 90px;
     font-weight: 700;
     line-height: 1.2;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
+    margin-top: 0;
     text-transform: uppercase;
 }
 
@@ -40,7 +41,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -53,13 +54,13 @@
 }
 
 @media (max-width: 1440px) {
-    .work-title h1 {
+    .work-title h3 {
         font-size: 70px;
     }
 }
 
 @media (max-width: 1024px) {
-    .work-title h1 {
+    .work-title h3 {
         font-size: 54px;
     }
 }
@@ -70,7 +71,7 @@
     gap: 16px; /* Меньше отступ между элементами */
   }
 
-  .work-title h1 {
+  .work-title h3 {
     font-size: 36px;
     margin-bottom: 40px;
   }
@@ -81,7 +82,7 @@
 }
 
 @media (max-width: 480px) {
-    .work-title h1 {
+    .work-title h3 {
         font-size: 22px;
     }
 

@@ -16,9 +16,9 @@
 
       <!-- License links -->
       <div class="license-links">
-        <a href="#">STYLE GUIDE</a>
-        <a href="#">LICENSES</a>
-        <a href="#">CHANGELOG</a>
+        <a href="#">СТИЛЬ</a>
+        <a href="#">ЛИЦЕНЗИИ</a>
+        <a href="#">ИСТОРИЯ ИЗМЕНЕНИЙ</a>
       </div>
 
       <!-- Big background text -->
@@ -139,10 +139,13 @@ export default {
 }
 
 .license-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
+
+  display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+
+  gap: 0;
   color: #a3a3a3;
   font-size: 14px;
   margin-bottom: 40px;
@@ -157,7 +160,7 @@ export default {
 .footer-bg-text h2 {
   font-size: 11vw;
   font-weight: 800;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1;

@@ -34,7 +34,7 @@
 
 .video-container {
   border-radius: 40px !important;
-  width: 100%;
+  width: 90%;
   height: 90%;
   position: relative;
   overflow: hidden;

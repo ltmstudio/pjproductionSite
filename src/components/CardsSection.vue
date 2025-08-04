@@ -59,7 +59,7 @@ function goToBlog(id) {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
-  max-width: 90%;
+  max-width: 100%;
   margin: 0 auto;
 }
 

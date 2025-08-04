@@ -8,9 +8,9 @@
                 </video>
             </div>
             <div class="center-text">
-                <h1>
+                <h3>
                     Создаем контент, который привлекает внимание
-                </h1>
+                </h3>
                 <p>
                     PJ PRODUCTION
                 </p>
@@ -59,12 +59,13 @@
 
 <style scoped>
 .triple-section {
-    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     /* 60px is vertical padding (top and bottom), 40px is horizontal (left and right) */
-    padding: 10px 40px;
+    padding: 80px 5%;
+   
     box-sizing: border-box;
     background-color: #000;
     font-family: 'Montserrat', sans-serif;
@@ -81,7 +82,7 @@
 .triple-section .video {
     flex: 1;
     max-width: 600px;
-    height: 600px;
+    height: 400px;
     position: relative;
     aspect-ratio: 1 / 1;
     border-radius: 24px;
@@ -99,7 +100,7 @@
 .triple-section .center-text {
     flex: 1;
     max-width: 600px;
-    height: 600px;
+    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,11 +115,11 @@
 .triple-section .center-text {
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
+    
 }
 
-.triple-section .center-text h1 {
-    font-size: 48px;
+.triple-section .center-text h3 {
+    font-size: 40px;
     font-weight: 800;
     color: white;
     margin-bottom: 16px;
@@ -182,8 +183,10 @@
 
 @media (max-width: 2561px) {
     .triple-section {
-        min-height: auto;
-        padding-bottom: 20px;
+     
+       
+
+        padding: 80px 5%;
   
 }
 
@@ -198,7 +201,7 @@
 .triple-section .video {
     flex: 1;
     max-width: 860px;
-    height: 700px;
+    height: 500px;
     position: relative;
     aspect-ratio: 1 / 1;
     border-radius: 24px;
@@ -216,8 +219,8 @@
 .triple-section .center-text {
     flex: 1;
     max-width: 860px;
-    height: 700px;
-    display: flex;
+    height: 500px;
+    position: relative;
     align-items: center;
     justify-content: center;
     aspect-ratio: 1 / 1;
@@ -231,11 +234,11 @@
 .triple-section .center-text {
     flex-direction: column;
     text-align: center;
-    padding: 0 20px;
+    
 }
 
-.triple-section .center-text h1 {
-    font-size: 56px;
+.triple-section .center-text h3 {
+    font-size: 42px;
     font-weight: 800;
     color: white;
     margin-bottom: 16px;
@@ -285,8 +288,9 @@
 }
 @media (max-width: 1440px) {
     .triple-section {
-    min-height: auto;
-    padding-bottom: 20px;
+ 
+   
+    padding: 80px 5%;
   }
 
     .tags-marquee-wrapper {
@@ -309,8 +313,8 @@
         height: 400px;
     }
 
-    .triple-section .center-text h1 {
-        font-size: 42px;
+    .triple-section .center-text h3 {
+        font-size: 32px;
     }
 
     .triple-section .center-text p {
@@ -320,8 +324,9 @@
 
 @media (max-width: 1024px) {
     .triple-section {
-    min-height: auto;
-    padding-bottom: 20px;
+
+ 
+    padding: 80px 5%;
   }
 
     .triple-section .center-text {
@@ -336,8 +341,8 @@
         height: 300px;
     }
 
-    .triple-section .center-text h1 {
-        font-size: 32px;
+    .triple-section .center-text h3 {
+        font-size: 24px;
     }
 
     .triple-section .center-text p {
@@ -355,7 +360,7 @@
 
 @media (max-width: 768px) {
     .triple-section {
-        min-height: auto;
+  
         padding: 40px 20px;
     }
 
@@ -364,13 +369,15 @@
         gap: 24px;
     }
 
-    .triple-section .video,
-    .triple-section .center-text {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-    }
+.triple-section .video,
+.triple-section .center-text {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;        /* ← важно */
+  max-width: none;     /* ← убрать ограничение */
+}
 
-    .triple-section .center-text h1 {
+    .triple-section .center-text h3 {
         font-size: 56px;
     }
 
@@ -389,8 +396,10 @@
 
 @media (max-width: 480px) {
     .triple-section .center-text {
+        box-sizing: border-box;
         max-width: 600px;
         height: 600px;
+        padding: 0 12px;
 
     }
 
@@ -400,12 +409,12 @@
         height: 600px;
     }
 
-    .triple-section .center-text h1 {
-        font-size: 16px;
+    .triple-section .center-text h3 {
+        font-size: 24px;
     }
 
     .triple-section .center-text p {
-        font-size: 8px;
+        font-size: 12px;
     }
 
     .tags-marquee-wrapper {

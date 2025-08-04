@@ -2,7 +2,7 @@
     <section class="video-section">
         <div class="up">
             <div class="large-text">
-                <h1>СТУДИЯ КРЕАТИВНОГО КОНТЕНТА</h1>
+                <h3>СТУДИЯ КРЕАТИВНОГО КОНТЕНТА</h3>
             </div>
             <div class="carousel-arrows">
                 <button class="arrow-button prev" @click="prevVideo">
@@ -30,8 +30,8 @@
 import { ref, computed } from 'vue'
 
 const videos = [
-    '/videos/video2.mp4',
-    '/videos/video3.mp4',
+    '/videos/video_58.mp4',
+    '/videos/video_58.mp4',
 ]
 
 const currentIndex = ref(0)
@@ -67,6 +67,7 @@ const prevVideo = () => {
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    padding: 0 5% 80px 5%;
 }
 
 .up {
@@ -75,7 +76,7 @@ const prevVideo = () => {
     align-items: end;
     max-width: 100%;
     margin: 0 auto;
-    padding: 100px 120px;
+
     color: white;
 
 }
@@ -88,11 +89,12 @@ const prevVideo = () => {
     /* Align text to the bottom */
 }
 
-.large-text h1 {
+.large-text h3 {
     font-size: 90px;
     line-height: 1.3;
     font-weight: 700;
     color: white;
+    margin-top: 0;
     margin-bottom: 0;
     /* Remove bottom margin for perfect alignment */
 }
@@ -139,7 +141,7 @@ const prevVideo = () => {
     justify-content: center;
     align-items: center;
     border-radius: 40px !important;
-    width: 90%;
+    width: 100%;
     height: 90%;
     position: relative;
     overflow: hidden;
@@ -181,6 +183,7 @@ const prevVideo = () => {
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
+    padding: 80px 5%;
 }
 
 .up {
@@ -189,7 +192,7 @@ const prevVideo = () => {
     align-items: end;
     max-width: 100%;
     margin: 0 auto;
-    padding: 100px 120px;
+
     color: white;
 
 }
@@ -202,7 +205,7 @@ const prevVideo = () => {
     /* Align text to the bottom */
 }
 
-.large-text h1 {
+.large-text h3 {
     font-size: 90px;
     line-height: 1.3;
     font-weight: 700;
@@ -242,12 +245,8 @@ const prevVideo = () => {
 
 }
 @media (max-width: 1440px) {
-    .up {
-        padding: 80px 100px;
-
-    }
-
-    .large-text h1 {
+  
+    .large-text h3 {
         font-size: 70px;
     }
 
@@ -263,12 +262,9 @@ const prevVideo = () => {
 
 /* 1024px */
 @media (max-width: 1024px) {
-    .up {
-        padding: 50px 70px;
+  
 
-    }
-
-    .large-text h1 {
+    .large-text h3 {
         font-size: 54px;
     }
 
@@ -284,12 +280,8 @@ const prevVideo = () => {
 
 /* 768px */
 @media (max-width: 768px) {
-    .up {
-        padding: 30px 50px;
 
-    }
-
-    .large-text h1 {
+    .large-text h3 {
         font-size: 36px;
     }
 
@@ -301,16 +293,16 @@ const prevVideo = () => {
     .carousel-arrows {
         gap: 10px;
     }
+    .video-carousel{
+        border-radius: 20px;
+    }
 }
 
 /* 480px */
 @media (max-width: 480px) {
-    .up {
-        padding: 20px 30px;
+   
 
-    }
-
-    .large-text h1 {
+    .large-text h3 {
         font-size: 22px;
     }
 
