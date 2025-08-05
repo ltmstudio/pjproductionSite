@@ -7,8 +7,8 @@ export const DataBlog = [
     description: 'Что было сделано: Разработали визуальную стилистику аккаунта и создали рубрикацию. Раскрыли внутреннюю «кухню» стоматологии и начали вести аккаунт в «дружелюбной» направленности. Настроили таргетированную рекламу, чтобы привлечь новых подписчиков и клиентов на услуги имплантологии. ',
     result: 'Результаты после 3-х месяцев:',
     resultText: '3234 новых подписчика, 76 заявок на имплантацию по средней стоимости 750 рублей.',
-    image: '/pictures/img-banner-first.jpg',
-    sourceImage: '/pictures/img-banner-first.jpg',
+    image: '/pictures/img-banner.jpg',
+    sourceImage: '/pictures/img-banner.jpg',
     sources: ['/pictures/social_media_icons/instacol.png']
   },
   {
