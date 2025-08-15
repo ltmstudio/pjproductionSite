@@ -395,6 +395,10 @@
 }
 
 @media (max-width: 480px) {
+    .triple-section {
+padding: 20px 5%;
+}
+
     .triple-section .center-text {
         box-sizing: border-box;
         max-width: 600px;

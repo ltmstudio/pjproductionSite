@@ -194,6 +194,12 @@
     }
 }
 @media (max-width: 480px) {
+    .about-section {
+
+    padding: 20px 5%;
+
+    
+}
     .main-text h2 {
         font-size: 22px;
         padding-left: 0;

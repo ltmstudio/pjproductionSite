@@ -226,6 +226,7 @@
 }
 
 @media (max-width: 480px) {
+
   .video-navigation {
     padding-top: 15px;
     bottom: 16px;
@@ -254,7 +255,14 @@
   }
 
   .hero-section {
-    padding-top: 24px;
+    padding-top: 70px;
   }
+  .video-container {
+  border-radius: 20px !important;
+}
+
+.youtube-video {
+  clip-path: inset(0 round 20px);
+}
 }
 </style>

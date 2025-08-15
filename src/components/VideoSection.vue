@@ -300,7 +300,9 @@ const prevVideo = () => {
 
 /* 480px */
 @media (max-width: 480px) {
-   
+    .video-section {
+    padding: 0 5% 20px 5%;
+}
 
     .large-text h3 {
         font-size: 22px;
@@ -314,5 +316,11 @@ const prevVideo = () => {
     .carousel-arrows {
         gap: 7px;
     }
+    .youtube-video {
+    clip-path: inset(0 round 20px);
+}
+.video-carousel {
+    border-radius: 20px !important;
+}
 }
 </style>

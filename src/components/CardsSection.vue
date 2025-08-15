@@ -30,7 +30,7 @@ const router = useRouter()
 const blogCards = ref([
   { id: 1, title: 'СТОМАТОЛОГИЯ DENTAL IMPLANT ' },
   { id: 2, title: 'КАППЫ «EUROKAPPA» ' },
-  { id: 3, title: 'VIP-ЗАЛЫ ШЕРЕМЕТЬЕВО' },
+  // { id: 3, title: 'VIP-ЗАЛЫ ШЕРЕМЕТЬЕВО' },
   { id: 4, title: 'КРОВАТКИ ДЛЯ ДЕТЕЙ MOMSJOYS ' },
   { id: 5, title: 'ОТБЕЛИВАНИЕ ЗУБОВ YOURSMILE ' },
   { id: 6, title: 'РЕСТОРАН НА РУБЛЕВКЕ JESSTAURANT ' }
@@ -223,6 +223,11 @@ function goToBlog(id) {
 
 
 @media (max-width: 480px) {
+  .blog-grid-section {
+
+  padding: 20px 5%;
+
+}
   .blog-card {
     min-height: 300px;
     padding: 16px;

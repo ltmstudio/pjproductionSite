@@ -87,8 +87,15 @@
     }
 
     .work-grid img {
-        border-radius: 10px;
+        border-radius: 20px;
     }
+    .work-section {
+    padding: 20px 5% 20px 5%;
+    background-color: #000;
+    text-align: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
 }
 
 </style>

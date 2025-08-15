@@ -6,7 +6,7 @@
     <VideoSection />
     <About />
     <Galery />
-    <CardsSection :include-ids="[1, 3, 5]" />
+    <CardsSection :include-ids="[1, 4, 5]" />
     <Contact/>
   </div>
 </template>

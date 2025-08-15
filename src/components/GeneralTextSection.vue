@@ -64,6 +64,11 @@
 
 @media (max-width: 480px) {
  
+  .genetal-text {
+  padding: 20px 5%; /* можно адаптировать */
+
+}
+
 
   .genetal-text h3 {
     font-size: 24px;
