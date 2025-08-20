@@ -34,7 +34,7 @@
 .about-section {
     display: flex;
     flex-direction: column;
-    padding: 80px 5%;
+    padding: 40px 5%;
     background-color: #000;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -90,7 +90,7 @@
         height:auto;
     display: flex;
     flex-direction: column;
-    padding: 80px 5%;
+    padding: 40px 5%;
     background-color: #000;
     color: #fff;
     font-family: 'Montserrat', sans-serif;
@@ -153,7 +153,9 @@
     margin-bottom: 10px;
    
   }
-
+  .about-section {
+padding: 32px 5%;
+}
   .main-text h2 {
     font-size: 54px;
     padding-left: 0;
@@ -192,11 +194,20 @@
         font-size: 36px;
         padding-left: 0;
     }
+    .about-section {
+padding: 25px 2%;
+}
+.left-text{
+    padding:0;
+}
+.right-text{
+    padding:0;
+}
 }
 @media (max-width: 480px) {
     .about-section {
 
-    padding: 20px 5%;
+    padding: 20px 2%;
 
     
 }

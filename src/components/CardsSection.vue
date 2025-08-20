@@ -51,7 +51,7 @@ function goToBlog(id) {
 .blog-grid-section {
   background: #000;
   color: #fff;
-  padding: 80px 5%;
+  padding: 40px 5%;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -166,6 +166,9 @@ function goToBlog(id) {
 
 
 @media (max-width: 1024px) {
+  .blog-grid-section {
+  padding: 32px 5%;
+}
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -195,6 +198,10 @@ function goToBlog(id) {
 
 
 @media (max-width: 768px) {
+  .blog-grid-section {
+  padding: 25px 2%;
+}
+
   .blog-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -225,7 +232,7 @@ function goToBlog(id) {
 @media (max-width: 480px) {
   .blog-grid-section {
 
-  padding: 20px 5%;
+  padding: 20px 2%;
 
 }
   .blog-card {

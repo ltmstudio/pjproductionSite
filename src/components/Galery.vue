@@ -21,7 +21,7 @@
 
 <style scoped>
 .work-section {
-    padding: 80px 5% 80px 5%;
+    padding: 40px 5% 40px 5%;
     background-color: #000;
     text-align: center;
     color: white;
@@ -57,13 +57,20 @@
     .work-title h3 {
         font-size: 70px;
     }
+    .work-section{
+        padding: 40px 5%;
+    }
 }
 
 @media (max-width: 1024px) {
     .work-title h3 {
         font-size: 54px;
     }
+    .work-section{
+        padding: 32px 5%;
+    }
 }
+
 
 @media (max-width: 768px) {
   .work-grid {
@@ -77,7 +84,7 @@
   }
 
   .work-section {
-    padding: 60px 5% 60px;
+    padding: 25px 2% ;
   }
 }
 
@@ -90,7 +97,7 @@
         border-radius: 20px;
     }
     .work-section {
-    padding: 20px 5% 20px 5%;
+    padding: 20px 2% 20px 2%;
     background-color: #000;
     text-align: center;
     color: white;

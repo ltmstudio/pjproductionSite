@@ -21,7 +21,7 @@
 
 <style scoped>
 .hero-section {
-  padding-top: 24px;
+  padding-top: 10px;
   width: 100%;
   height: 100vh;
   position: relative;
@@ -134,10 +134,6 @@
 
 
 
-
-
-@media (max-width: 1440px) {}
-
 @media (max-width: 1440px) {
   .overlay-text {
     bottom: 20%;
@@ -156,8 +152,8 @@
   }
 
   .hero-section {
-    padding-top: 32px;
-    min-height: 90vh;
+    
+    min-height: 0;
   }
 
   .video-container {
@@ -188,7 +184,9 @@
 
   .hero-section {
     padding-top: 0px;
-    min-height: 90vh;
+    min-height: 0;
+    height: auto;
+    aspect-ratio: 16 / 9;
   }
 
   .video-container {
@@ -210,7 +208,7 @@
   }
 
   .hero-section {
-    padding-top: 40px;
+   
     min-height: auto;
     height: auto;
   }
@@ -255,7 +253,7 @@
   }
 
   .hero-section {
-    padding-top: 70px;
+    
   }
   .video-container {
   border-radius: 20px !important;

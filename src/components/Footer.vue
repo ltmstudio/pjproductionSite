@@ -15,20 +15,6 @@
      
 
       <!-- License links -->
-      <div class="license-links">
-        <a href="#">СТИЛЬ</a>
-        <a href="#">ЛИЦЕНЗИИ</a>
-        <a href="#">ИСТОРИЯ ИЗМЕНЕНИЙ</a>
-      </div>
-
-      <!-- Big background text -->
-      <div class="footer-bg-text">
-        <h2>PJ.Production</h2>
-      </div>
-
-      <div class="footer-line"></div>
-
-      <!-- Bottom menu -->
       <div class="bottom-menu">
         <a href="#">ГЛАВНАЯ</a>
         <a href="#about">О НАС</a>
@@ -36,6 +22,66 @@
         <a href="/blog">SMM</a>
         <a href="#contact">КОНТАКТЫ</a>
       </div>
+
+      <div class="footer-info">
+  <div class="info-col">
+    <div class="kv">
+      <div class="kv-title">Расчётный счёт:</div>
+      <div class="kv-value">40802810640070007769</div>
+    </div>
+    <div class="kv">
+      <div class="kv-title">ИНН: 503806969150</div>
+      
+    </div>
+    <div class="kv">
+      <div class="kv-title">БИК банка: 044525225</div>
+    
+    </div>
+    <div class="kv">
+      <div class="kv-title">ИНН банка: 7707083893</div>
+     
+    </div>
+  </div>
+
+  <div class="info-col">
+    <div class="kv">
+      <div class="kv-title">Корсчёт:</div>
+      <div class="kv-value">30101810400000000225</div>
+    </div>
+    <div class="kv">
+      <div class="kv-title">ОГРНИП: 325508100409800</div>
+      
+    </div>
+    <div class="kv">
+      <div class="kv-title">Банк: ПАО Сбербанк</div>
+     
+    </div>
+    <div class="kv">
+      <div class="kv-title">КПП банка: 773643002</div>
+      
+    </div>
+  </div>
+
+  <div class="info-col info-right">
+    <p class="phone">+7 (916) 6-462-462</p>
+    <p class="address">
+      141271, Московская область,<br>
+      Пушкинский р-н, пос.<br>
+      Софрино&nbsp;–&nbsp;1, д.27, кв.&nbsp;53
+    </p>
+  </div>
+</div>
+
+<!-- Юр.инфо -->
+<div class="footer-legal">
+  <div class="owner">
+    ИНДИВИДУАЛЬНЫЙ ПРЕДПРИНИМАТЕЛЬ ПАСТУХОВА ЮЛИЯ СЕРГЕЕВНА
+  </div>
+  <a class="privacy" href="/Политика%20конфиденцильности%20сайт.pdf">Политика конфиденциальности</a>
+</div>
+
+     
+
     </div>
   </footer>
 </template>
@@ -53,12 +99,13 @@ export default {
 
 <style scoped>
 .app-footer {
-  background-color: #0a0a0a;
+  position: sticky;
   color: white;
   padding: 80px 0;
   font-family: sans-serif;
   overflow: hidden;
   font-family: 'Montserrat', sans-serif;
+  background: #050505 url("/pictures/footer.jpg") center/contain no-repeat;
 }
 
 .footer-container {
@@ -67,7 +114,7 @@ export default {
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 0;
 }
 
 .scroll-button {
@@ -100,109 +147,6 @@ export default {
   width: 20px;
   height: 20px;
 }
-
-.social-title {
-  text-align: center;
-  font-size: 12px;
-  color: #a3a3a3;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-
-.social-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-
-.icon {
-  width: 36px;
-  height: 36px;
-  border: 1px solid #4b5563;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background 0.3s;
-}
-
-.icon img {
-  width: 16px;
-  height: 16px;
-}
-
-.icon:hover {
-  background-color: #474645;
-}
-
-.license-links {
-
-  display: grid;
-
-grid-template-columns: repeat(3, 1fr);
-  text-align: center;
-
-  gap: 0;
-  color: #a3a3a3;
-  font-size: 14px;
-  margin-bottom: 40px;
-}
-
-.footer-bg-text {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.footer-bg-text h2 {
-  font-size: 11vw;
-  font-weight: 800;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-@media (min-width: 640px) {
-  .license-links {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-.license-links a {
-  color: #a3a3a3;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-
-.license-links a:hover {
-  color: #ffffff
-}
-
-.footer-bg-text {
-  text-align: center;
-}
-
-.footer-bg-text h2 {
-  font-size: 11vw;
-  font-weight: 800;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1;
-}
-
-.footer-line {
-  border-bottom: 1px solid #1f2937;
-  margin-top: 40px;
-}
-
 .bottom-menu {
   display: flex;
   flex-wrap: wrap;
@@ -222,4 +166,97 @@ grid-template-columns: repeat(3, 1fr);
   color: #ffffff;
   transform: translateY(-10px);
 }
+
+
+
+
+
+.footer-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 40px;
+  margin-top: 32px;
+  color: #fff;
+  justify-items: center;   /* центруем содержимое колонок */
+  text-align: center; 
+  align-items: start;     /* центрируем текст */
+}
+.footer-info p { margin: 0; }
+
+.info-col {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  font-size: 16px;
+}
+
+.kv { display: grid; gap: 4px; }
+.kv-title, .kv-value { margin: 0; }
+.info-col.info-right { gap: 20px; align-self: center; }
+.info-right,
+.phone,
+.address { text-align: center; }
+
+.phone { line-height: 1.15; }
+.address { line-height: 1.25; }
+
+.footer-legal {
+  margin-top: 60px;
+  text-align: center;
+  display: grid;
+  gap: 10px;
+}
+
+.footer-legal .owner { font-size: 14px; letter-spacing: .5px; opacity: .85; }
+.footer-legal .privacy { font-size: 18px; color: #b266ff; text-decoration: none; transition: color .2s ease, opacity .2s ease;}
+
+
+/* базовый стиль ссылки */
+
+
+.footer-legal .privacy {
+  display: inline-block;          /* чтобы transform работал ожидаемо */
+  color: #b266ff;
+  transition: transform .2s ease, color .2s ease, opacity .2s ease;
+  will-change: transform;
+}
+
+.footer-legal .privacy:hover {
+  transform: translateY(6px);     /* движение ВНИЗ на ховере */
+  color: #ffffff;                 /* опционально: перекрас */
+  opacity: .95;
+}
+
+.footer-legal .privacy:active {
+  transform: translateY(8px);     /* лёгкий "нажим" при клике */
+}
+
+
+
+@media (max-width:768px) {
+  .app-footer {
+  background: #050505 url("/pictures/footermini.jpg") center/contain no-repeat;
+}
+.info-col{font-size:14px}
+.footer-legal .owner { font-size: 12px;  }
+.footer-legal .privacy { font-size: 16px;  }
+
+}
+
+@media(max-width:480px) {
+  .app-footer {
+  background: #050505 url("/pictures/footermini.jpg") center/cover no-repeat;
+}
+  .footer-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);    /* центрируем текст */
+}  
+.info-col.info-right {
+    grid-column: 1 / -1;   /* занять обе колонки */
+    justify-self: center; 
+    gap:10px; /* центр по горизонтали */
+  }
+  .info-col{ gap:10px}
+}
+
 </style>

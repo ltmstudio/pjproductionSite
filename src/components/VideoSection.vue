@@ -67,7 +67,7 @@ const prevVideo = () => {
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    padding: 0 5% 80px 5%;
+    padding: 0 5% 40px 5%;
 }
 
 .up {
@@ -183,7 +183,7 @@ const prevVideo = () => {
     flex-direction: column;
     align-items: center;
     font-family: 'Montserrat', sans-serif;
-    padding: 80px 5%;
+    padding: 40px 5%;
 }
 
 .up {
@@ -276,6 +276,9 @@ const prevVideo = () => {
     .carousel-arrows {
         gap: 12px;
     }
+    .video-section{
+        padding: 32px 5%;
+    }
 }
 
 /* 768px */
@@ -296,12 +299,16 @@ const prevVideo = () => {
     .video-carousel{
         border-radius: 20px;
     }
+    .video-section{
+        padding: 25px 2%;
+    }
+
 }
 
 /* 480px */
 @media (max-width: 480px) {
     .video-section {
-    padding: 0 5% 20px 5%;
+    padding: 10px 2% 20px 2%;
 }
 
     .large-text h3 {

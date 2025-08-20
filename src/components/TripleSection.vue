@@ -64,7 +64,7 @@
     flex-direction: column;
     justify-content: space-between;
     /* 60px is vertical padding (top and bottom), 40px is horizontal (left and right) */
-    padding: 80px 5%;
+    padding: 40px 5%;
    
     box-sizing: border-box;
     background-color: #000;
@@ -182,12 +182,9 @@
 
 
 @media (max-width: 2561px) {
-    .triple-section {
-     
-       
+    .triple-section {   
 
-        padding: 80px 5%;
-  
+        padding: 40px 5%;
 }
 
 .triple-section .block {
@@ -290,7 +287,7 @@
     .triple-section {
  
    
-    padding: 80px 5%;
+    padding: 40px 5%;
   }
 
     .tags-marquee-wrapper {
@@ -326,7 +323,7 @@
     .triple-section {
 
  
-    padding: 80px 5%;
+    padding: 32px 5%;
   }
 
     .triple-section .center-text {
@@ -360,8 +357,7 @@
 
 @media (max-width: 768px) {
     .triple-section {
-  
-        padding: 40px 20px;
+        padding: 25px 2%;
     }
 
     .triple-section .block {
@@ -396,7 +392,7 @@
 
 @media (max-width: 480px) {
     .triple-section {
-padding: 20px 5%;
+padding: 20px 2%;
 }
 
     .triple-section .center-text {

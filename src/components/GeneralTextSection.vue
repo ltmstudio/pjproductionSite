@@ -14,10 +14,14 @@
 .genetal-text {
   max-width: 100%;
   margin: 0 auto;
-  padding: 80px 5%; /* можно адаптировать */
+  padding: 40px 5%; /* можно адаптировать */
   text-align: left;
   color: white;
   font-family: 'Montserrat', sans-serif;
+}
+.genetal-text h3,
+.genetal-text p {
+  margin: 0;              /* убрать дефолтный margin */
 }
 
 .genetal-text h3 {
@@ -25,7 +29,8 @@
   line-height: 1.3;
   font-weight: 700;
   color: white;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
+ 
 }
 
 .genetal-text p {
@@ -43,11 +48,19 @@
 
   .genetal-text h3 {
     font-size: 40px;
+    margin-bottom: 20px;
   }
 
   .genetal-text p {
     font-size: 15px;
   }
+
+  .genetal-text {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 32px 5%; /* можно адаптировать */
+ 
+}
 }
 
 @media (max-width: 768px) {
@@ -55,23 +68,31 @@
 
   .genetal-text h3 {
     font-size: 32px;
+    margin-bottom: 10px;
   }
 
   .genetal-text p {
     font-size: 14px;
   }
+  .genetal-text {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 25px 2%; /* можно адаптировать */
+ 
+}
 }
 
 @media (max-width: 480px) {
  
   .genetal-text {
-  padding: 20px 5%; /* можно адаптировать */
+  padding: 20px 2%; /* можно адаптировать */
 
 }
 
 
   .genetal-text h3 {
     font-size: 24px;
+    margin-bottom: 10px;
   }
 
   .genetal-text p {

@@ -109,6 +109,20 @@
   background-color: rgba(255, 255, 255, 0.4);
 }
 @media (max-width: 768px) {
+  .content-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* заголовок вверх */
+  align-items: center;
+  gap: 40px;
+}
   .title {
     font-size: 32px;
     text-align: center;
