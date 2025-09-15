@@ -197,5 +197,16 @@ const toggleEmail = () => {
   letter-spacing: 1px;
 
 }
+.mail-icon{
+    width: 16px;
+    height: 16px;
+    filter: invert(0);
+}
+.phone-link{
+    font-size: 11px;
+}
+.header{
+    padding: 0 4px;
+}
 }
 </style>

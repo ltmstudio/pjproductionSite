@@ -245,7 +245,7 @@ export default {
 
 @media(max-width:480px) {
   .app-footer {
-  background: #050505 url("/pictures/footermini.jpg") center/cover no-repeat;
+  background:  url("/pictures/480.jpg") center/cover no-repeat;
 }
   .footer-info {
   display: grid;
@@ -257,6 +257,19 @@ export default {
     gap:10px; /* центр по горизонтали */
   }
   .info-col{ gap:10px}
+  .bottom-menu {
+    gap: 16px;
+}
 }
 
+@media (max-width: 380px) {
+  .footer-info{
+        width: 100%;
+        display: grid;
+        grid-template-columns: none;
+    }
+    .app-footer {
+  background:  url("/pictures/320.jpg") center/cover no-repeat;
+}
+}
 </style>

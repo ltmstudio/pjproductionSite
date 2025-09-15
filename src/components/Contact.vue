@@ -67,7 +67,7 @@
     padding-left: 20px;
     padding-right: 20px;
   font-size: 48px;
-  font-weight: 900;
+  font-weight: 700;
   text-transform: uppercase;
   margin-top: 20px;
   letter-spacing: 2px;
@@ -136,6 +136,25 @@
     flex-direction: column;
     text-align: center;
   }
-}
+ 
 
+}
+@media (max-width: 480px) {
+    .title {
+      font-size: 22px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .contact-item{
+      font-size: 14px;
+    }
+    .icon{
+      width: 40px;
+      height: 40px;
+    }
+    .icon img{
+      width: 18px;
+      height: 18px;
+    }
+  }
 </style>

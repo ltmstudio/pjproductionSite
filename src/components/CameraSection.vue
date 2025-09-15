@@ -107,5 +107,22 @@ function toggle() {
     .guides-header h1 {
         font-size: 22px;
     }
+    .guides-header {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 40px 5% 40px;
+    font-family: 'Montserrat', sans-serif;
+}
+.dot{
+    width: 15px;
+    height: 15px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+.line-wrapper{
+    gap: 9px;
+}
 }
 </style>

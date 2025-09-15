@@ -91,12 +91,13 @@
 
 
   .genetal-text h3 {
-    font-size: 24px;
+    font-size: 22px;
     margin-bottom: 10px;
+    font-weight: 500;
   }
 
   .genetal-text p {
-    font-size: 13px;
+    font-size: 14px;
   }
 }
 </style>

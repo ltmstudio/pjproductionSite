@@ -34,7 +34,7 @@
 
 .video-container {
   border-radius: 40px !important;
-  width: 90%;
+  width: 100%;
   height: 90%;
   position: relative;
   overflow: hidden;
@@ -227,7 +227,7 @@
 
   .video-navigation {
     padding-top: 15px;
-    bottom: 16px;
+    bottom: 12px;
   }
 
   .overlay-text h1 {
@@ -262,5 +262,14 @@
 .youtube-video {
   clip-path: inset(0 round 20px);
 }
+}
+@media (max-width: 340px) {
+  .video-container{
+        border-radius: 20px !important;
+        width: 277px;
+    }
+    .nav-line{
+        width: 90px;
+    }
 }
 </style>

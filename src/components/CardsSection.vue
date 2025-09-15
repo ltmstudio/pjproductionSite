@@ -231,7 +231,6 @@ function goToBlog(id) {
 
 @media (max-width: 480px) {
   .blog-grid-section {
-
   padding: 20px 2%;
 
 }
@@ -239,6 +238,7 @@ function goToBlog(id) {
     min-height: 300px;
     padding: 16px;
     border-radius: 16px;
+    min-width: auto;
   }
 
   .blog-card::after {
@@ -247,7 +247,7 @@ function goToBlog(id) {
   }
 
   .blog-card h3 {
-    font-size: 24px;
+    font-size: 22px;
   }
 
   .arrow {
@@ -256,5 +256,9 @@ function goToBlog(id) {
     font-size: 13px;
   }
 }
-
+@media (max-width: 370px) {
+  .blog-card {
+    min-height: 245px;
+}
+}
 </style>

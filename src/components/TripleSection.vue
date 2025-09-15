@@ -410,7 +410,7 @@ padding: 20px 2%;
     }
 
     .triple-section .center-text h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .triple-section .center-text p {
@@ -424,5 +424,8 @@ padding: 20px 2%;
   margin-top: 20px;
   margin-bottom: 40px;
 }
+.tags-marquee {
+        font-size: 14px;
+    }
 }
 </style>
