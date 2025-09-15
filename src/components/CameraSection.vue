@@ -111,18 +111,19 @@ function toggle() {
     background: #000;
     color: #fff;
     text-align: center;
-    padding: 40px 5% 40px;
+    padding: 16px 5% 20px;
     font-family: 'Montserrat', sans-serif;
 }
-.dot{
-    width: 15px;
-    height: 15px;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
+
 .line-wrapper{
     gap: 9px;
+}
+.guides-header h1{
+    margin-bottom: 32px;
+}
+.dot {
+    width: 10px;
+    height: 10px;
 }
 }
 </style>
