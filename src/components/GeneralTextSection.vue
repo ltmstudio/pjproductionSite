@@ -26,7 +26,7 @@
 
 .genetal-text h3 {
   font-size: 48px;
-  line-height: 1.3;
+  line-height: 1.4;
   font-weight: 700;
   color: white;
   margin-bottom: 20px;

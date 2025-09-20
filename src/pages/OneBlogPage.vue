@@ -158,14 +158,14 @@
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 20px;
-    line-height: 1.1;
+    line-height: 1.4;
     text-transform: uppercase;
     color: #fff;
 }
 
 .text p {
     font-size: 20px;
-    line-height: 1.6;
+    line-height: 1.4;
     color: #e0e0e0;
     margin-bottom: 12px;
     font-weight: 400;
@@ -219,6 +219,7 @@
 .result p {
     font-size: 28px;
     color: #e0e0e0;
+    line-height: 1.4;
 }
 
 .source-images {

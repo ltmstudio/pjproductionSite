@@ -91,7 +91,7 @@ const prevVideo = () => {
 
 .large-text h3 {
     font-size: 90px;
-    line-height: 1.3;
+    line-height: 1.2;
     font-weight: 700;
     color: white;
     margin-top: 0;

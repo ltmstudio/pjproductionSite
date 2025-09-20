@@ -239,6 +239,7 @@
     font-weight: 800;
     color: white;
     margin-bottom: 16px;
+    line-height: 1.4;
 }
 
 .triple-section .center-text p {

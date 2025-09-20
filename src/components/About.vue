@@ -49,7 +49,7 @@
 .main-text h2 {
     font-size: 90px;
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
     margin: 0;
     text-transform: uppercase;
 }
@@ -70,7 +70,7 @@
     font-weight: 500;
     text-transform: uppercase;
     color: #bdbdbd;
-    line-height: 1.6;
+    line-height: 1.4;
     letter-spacing: 0.05em;
     padding-top: 20px;
 }
@@ -79,7 +79,7 @@
     flex: 1;
     max-width: 720px;
     font-size: 21px;
-    line-height: 1.8;
+    line-height: 1.4;
     letter-spacing: 0.01em;
     padding-left: 50px;
 }
@@ -105,7 +105,7 @@
 .main-text h2 {
     font-size: 90px;
     font-weight: 700;
-    line-height: 1.1;
+ 
     margin: 0;
     text-transform: uppercase;
 }
@@ -126,7 +126,7 @@
     font-weight: 500;
     text-transform: uppercase;
     color: #bdbdbd;
-    line-height: 1.6;
+
     letter-spacing: 0.05em;
  
 }
@@ -135,7 +135,7 @@
     flex: 1;
     max-width: 1500px;
     font-size: 28px;
-    line-height: 1.8;
+
     letter-spacing: 0.01em;
 }
 
