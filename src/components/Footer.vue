@@ -3,7 +3,7 @@
     <div class="footer-container">
       <!-- Scroll to top button -->
       <div class="scroll-button">
-        <button @click="scrollToTop" class="arrow-btn">
+        <button type="button" @click="scrollToTop" class="arrow-btn" aria-label="Вернуться в начало страницы">
           <svg xmlns="http://www.w3.org/2000/svg" class="arrow-icon" fill="none" viewBox="0 0 24 24"
             stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
@@ -16,11 +16,11 @@
 
       <!-- License links -->
       <div class="bottom-menu">
-        <a href="#">ГЛАВНАЯ</a>
-        <a href="#about">О НАС</a>
-        <a href="#work">ВИДЕО И ФОТО</a>
-        <a href="/blog">SMM</a>
-        <a href="#contact">КОНТАКТЫ</a>
+        <RouterLink to="/">ГЛАВНАЯ</RouterLink>
+        <RouterLink to="/#about">О НАС</RouterLink>
+        <RouterLink to="/#work">ВИДЕО И ФОТО</RouterLink>
+        <RouterLink to="/blog">SMM</RouterLink>
+        <RouterLink to="/#contact">КОНТАКТЫ</RouterLink>
       </div>
 
       <div class="footer-info">
@@ -63,7 +63,7 @@
   </div>
 
   <div class="info-col info-right">
-    <p class="phone">+7 (916) 6-462-462</p>
+    <p class="phone"><a :href="`tel:${siteContacts.phone}`" class="footer-phone">{{ siteContacts.phoneDisplayFooter }}</a></p>
     <p class="address">
       141271, Московская область,<br>
       Пушкинский р-н, пос.<br>
@@ -87,8 +87,10 @@
 </template>
 
 <script>
+import { siteContacts } from '@/config/contacts'
 export default {
   name: 'AppFooter',
+  data: () => ({ siteContacts }),
   methods: {
     scrollToTop() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -198,6 +200,7 @@ export default {
 .address { text-align: center; }
 
 .phone { line-height: 1.15; }
+.footer-phone { color: inherit; text-decoration: none; }
 .address { line-height: 1.25; }
 
 .footer-legal {

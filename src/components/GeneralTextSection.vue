@@ -1,10 +1,10 @@
 <template>
-    <div class="genetal-text">
-        <h3>
+    <div class="genetal-text" data-scroll-reveal>
+        <p class="lead">
             Мы создаем и продвигаем контент: от REELS до видео рекламы, с качеством, которому вы можете доверять. Мы
             работаем с компаниями и творческими людьми, создавая и продвигая лучший контент, работая креативно и
             эффективно.
-        </h3>
+        </p>
         <p>
             Создаём и продвигаем контент: <br>фото, видео, таргет, SMM, контекст.</br> 
         </p>
@@ -20,17 +20,17 @@
   font-family: 'Montserrat', sans-serif;
 }
 .genetal-text h3,
+.genetal-text .lead,
 .genetal-text p {
-  margin: 0;              /* убрать дефолтный margin */
+  margin: 0;
 }
 
-.genetal-text h3 {
+.genetal-text .lead {
   font-size: 48px;
   line-height: 1.4;
   font-weight: 700;
   color: white;
   margin-bottom: 20px;
- 
 }
 
 .genetal-text p {
@@ -46,7 +46,7 @@
 @media (max-width: 1024px) {
  
 
-  .genetal-text h3 {
+  .genetal-text .lead {
     font-size: 40px;
     margin-bottom: 20px;
   }
@@ -66,7 +66,7 @@
 @media (max-width: 768px) {
  
 
-  .genetal-text h3 {
+  .genetal-text .lead {
     font-size: 32px;
     margin-bottom: 10px;
   }
@@ -90,7 +90,7 @@
 }
 
 
-  .genetal-text h3 {
+  .genetal-text .lead {
     font-size: 22px;
     margin-bottom: 10px;
     font-weight: 500;

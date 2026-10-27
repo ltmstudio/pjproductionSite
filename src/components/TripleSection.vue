@@ -1,5 +1,5 @@
 <template>
-    <section class="triple-section">
+    <section class="triple-section" data-scroll-reveal>
         <div class="block">
             <div class="video">
                 <video autoplay muted loop playsinline>

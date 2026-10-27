@@ -1,5 +1,5 @@
 <template>
-    <section class="video-section">
+    <section class="video-section" data-scroll-reveal>
         <div class="up">
             <div class="large-text">
                 <h3>СТУДИЯ КРЕАТИВНОГО КОНТЕНТА</h3>

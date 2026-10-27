@@ -1,7 +1,7 @@
 <template>
-<section class="blog-grid-section">
+<section class="blog-grid-section" data-scroll-reveal-stagger>
   <div class="blog-grid">
-    <div v-for="item in visibleItems" :key="item.id" class="blog-card" @click="goToBlog(item.id)">
+    <div v-for="item in visibleItems" :key="item.id" class="blog-card" data-scroll-reveal-item tabindex="0" role="button" @click="goToBlog(item.id)" @keydown.enter="goToBlog(item.id)" @keydown.space.prevent="goToBlog(item.id)">
       <h3>{{ item.title }}</h3>
       <div class="blog-card-footer">
         <span>BLOG</span>
@@ -75,6 +75,7 @@ function goToBlog(id) {
   transition: background 0.3s ease;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .blog-card > * {

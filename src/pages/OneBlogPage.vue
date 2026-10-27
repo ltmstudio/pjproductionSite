@@ -1,6 +1,6 @@
 <template>
     <section class="one-blog-page" v-if="card">
-      <h2>{{ card.title }}</h2>
+      <h1>{{ card.title }}</h1>
   
       <div class="line-wrapper">
         <span class="dot white" />
@@ -10,33 +10,34 @@
         <span class="dot white" />
       </div>
   
-      <img class="img-big" :src="card.image" alt="main image" />
+      <img class="img-big" :src="card.image" :alt="card.title" loading="lazy" />
   
       <div class="inner-content">
         <div class="text">
-          <h3>{{ card.header }}</h3>
+          <h2>{{ card.header }}</h2>
           <p>{{ card.description }}</p>
         </div>
   
         <div class="img-mini">
-          <img :src="card.sourceImage" alt="mini image" />
+          <img :src="card.sourceImage" :alt="card.title" loading="lazy" />
         </div>
   
         <div class="foot">
             <div class="source">
-          <h3>Источник</h3>
+          <h2>Источник</h2>
           <div class="source-images">
             <img
               v-for="(img, index) in card.sources"
               :key="index"
               :src="img"
-              alt="logo"
+              :alt="`Источник ${index + 1}`"
+              loading="lazy"
             />
           </div>
         </div>
   
         <div class="result">
-          <h3>{{ card.result }}</h3>
+          <h2>{{ card.result }}</h2>
           <p>{{ card.resultText }}</p>
         </div>
         </div>
@@ -47,18 +48,19 @@
   
 
 
-  <script setup>
-
+<script setup>
   import { useRoute } from 'vue-router'
-  import { computed } from 'vue'
+  import { computed, watch } from 'vue'
   import { DataBlog } from '@/data/DataBlog'
-  
+
   const route = useRoute()
   const id = computed(() => Number(route.params.id))
   const card = computed(() => DataBlog.find(item => item.id === id.value))
 
-  
-  </script>
+  watch(card, (c) => {
+    if (c?.title) document.title = `${c.title} — PJ Production`
+  }, { immediate: true })
+</script>
   
 
 <style scoped>
@@ -71,7 +73,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.one-blog-page h2 {
+.one-blog-page h1 {
     font-size: 60px;
     font-weight: 800;
     line-height: 1.1;
@@ -154,7 +156,7 @@
     text-align: left;
 
 }
-.text h3 {
+.text h2 {
     font-size: 28px;
     font-weight: 800;
     margin-bottom: 20px;
@@ -209,11 +211,11 @@
 .source {
     padding-bottom: 20px;
 }
-.source h3 {
+.source h2 {
     font-size: 36px;
     
 }
-.result h3 {
+.result h2 {
     font-size: 32px;
 }
 .result p {
@@ -255,7 +257,7 @@
     padding: 80px 5% 40px;
   }
 
-  .one-blog-page h2 {
+  .one-blog-page h1 {
     font-size: 42px;
   }
 
@@ -263,7 +265,7 @@
     width: 90%;
   }
 
-  .text h3 {
+  .text h2 {
     font-size: 22px;
   }
 
@@ -286,8 +288,8 @@
     width: 100%;
   }
 
-  .source h3,
-  .result h3 {
+  .source h2,
+  .result h2 {
     font-size: 24px;
   }
 
@@ -311,11 +313,11 @@
     padding: 60px 4% 30px;
   }
 
-  .one-blog-page h2 {
+  .one-blog-page h1 {
     font-size: 32px;
   }
 
-  .text h3 {
+  .text h2 {
     font-size: 20px;
   }
 
@@ -331,8 +333,8 @@
     width: 70%;
   }
 
-  .source h3,
-  .result h3 {
+  .source h2,
+  .result h2 {
     font-size: 20px;
   }
 
@@ -348,11 +350,11 @@
 }
 
 @media (max-width: 480px) {
-  .one-blog-page h2 {
+  .one-blog-page h1 {
     font-size: 24px;
   }
 
-  .text h3 {
+  .text h2 {
     font-size: 18px;
   }
 
@@ -360,8 +362,8 @@
     font-size: 15px;
   }
 
-  .source h3,
-  .result h3 {
+  .source h2,
+  .result h2 {
     font-size: 18px;
   }
 

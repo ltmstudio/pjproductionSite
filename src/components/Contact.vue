@@ -1,30 +1,33 @@
 <template>
-    <section id="contact" class="contact">
+    <section id="contact" class="contact" data-scroll-reveal>
       <div class="banner">
-        <img src="/pictures/contact-banner.jpg" alt="Contact Banner" />
+        <img src="/pictures/contact-banner.jpg" alt="Свяжитесь с нами — PJ Production" loading="lazy" />
         <div class="content-overlay">
           <h3 class="title">СВЯЖИТЕСЬ С НАМИ</h3>
           <div class="contact-items">
             <div class="contact-item">
-              <div class="icon"><img src="/pictures/social_media_icons/phon.png" alt="Phone" /></div>
-              <span>+8-916-646-24-62</span>
+              <div class="icon"><img src="/pictures/social_media_icons/phon.png" alt="" loading="lazy" /></div>
+              <a :href="`tel:${siteContacts.phone}`" class="contact-link">{{ siteContacts.phoneDisplay }}</a>
             </div>
             <div class="contact-item">
-              <div class="icon"><img src="/pictures/social_media_icons/gmail.png" alt="Email" /></div>
-              <span>pj.production@yandex.ru</span>
+              <div class="icon"><img src="/pictures/social_media_icons/gmail.png" alt="" loading="lazy" /></div>
+              <a :href="`mailto:${siteContacts.email}`" class="contact-link">{{ siteContacts.email }}</a>
             </div>
             <div class="contact-item">
-              <div class="icon"><img src="/pictures/social_media_icons/web.png" alt="Web" /></div>
-              <span>pj-production.ru</span>
+              <div class="icon"><img src="/pictures/social_media_icons/web.png" alt="" loading="lazy" /></div>
+              <span>{{ siteContacts.site }}</span>
             </div>
           </div>
         </div>
       </div>
     </section>
   </template>
-  
 
-<style scoped>
+  <script setup>
+  import { siteContacts } from '@/config/contacts'
+  </script>
+
+  <style scoped>
 .contact {
   width: 100%;
   background: #000;
@@ -86,6 +89,11 @@
   align-items: center;
   gap: 12px;
   font-size: 18px;
+}
+
+.contact-link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .icon {

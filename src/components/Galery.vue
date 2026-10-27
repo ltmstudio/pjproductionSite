@@ -1,17 +1,17 @@
 <template>
-    <section id="work" class="work-section">
-        <div class="work-title">
+    <section id="work" class="work-section" data-scroll-reveal-stagger>
+        <div class="work-title" data-scroll-reveal-item>
             <h3>НАШИ РАБОТЫ</h3>
             <p class="work-description">Стоимость каждого проекта рассчитывается индивидуально при заказе</p>
         </div>
 
         <div class="work-grid">
-            <img src="/galery-photo/007-min.jpg" alt="Work 1" />
-            <img src="/galery-photo/0069-min.jpg" alt="Work 1" />
-            <img src="/galery-photo/0070-min.jpg" alt="Work 1" />
-            <img src="/galery-photo/0085-min.jpg" alt="Work 1" />
-            <img src="/galery-photo/0088-min.jpg" alt="Work 1" />
-            <img src="/galery-photo/0095-min.jpg" alt="Work 1" />
+            <img data-scroll-reveal-item src="/galery-photo/007-min.jpg" alt="Работа 1 — портфолио PJ Production" loading="lazy" />
+            <img data-scroll-reveal-item src="/galery-photo/0069-min.jpg" alt="Работа 2 — портфолио PJ Production" loading="lazy" />
+            <img data-scroll-reveal-item src="/galery-photo/0070-min.jpg" alt="Работа 3 — портфолио PJ Production" loading="lazy" />
+            <img data-scroll-reveal-item src="/galery-photo/0085-min.jpg" alt="Работа 4 — портфолио PJ Production" loading="lazy" />
+            <img data-scroll-reveal-item src="/galery-photo/0088-min.jpg" alt="Работа 5 — портфолио PJ Production" loading="lazy" />
+            <img data-scroll-reveal-item src="/galery-photo/0095-min.jpg" alt="Работа 6 — портфолио PJ Production" loading="lazy" />
            
         </div>
     </section>
@@ -58,6 +58,7 @@
 .work-grid img {
     width: 100%;
     height: auto;
+    aspect-ratio: 4 / 3;
     border-radius: 20px;
     object-fit: cover;
     display: block;

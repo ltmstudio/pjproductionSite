@@ -1,13 +1,12 @@
 <template>
   <section id="main" class="hero-section">
     <div class="video-container">
-      <img class="youtube-video" src="/pictures/img-banner-first.jpg" frameborder="0" allow="autoplay; encrypted-media"
-        allowfullscreen></img>
-      <div class="overlay-text">
+      <img class="youtube-video" src="/pictures/img-banner-first.jpg" alt="PJ Production — студия креативного контента" fetchpriority="high" />
+      <div ref="overlayRef" class="overlay-text">
         <h1>PJ PRODUCTION</h1>
         <h2>СТУДИЯ КРЕАТИВНОГО КОНТЕНТА</h2>
       </div>
-      <div class="video-navigation">
+      <div ref="navRef" class="video-navigation">
         <span class="nav-dot"></span>
         <span class="nav-line"></span>
         <span class="nav-dot active"></span>
@@ -18,6 +17,30 @@
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import gsap from 'gsap'
+
+const overlayRef = ref(null)
+const navRef = ref(null)
+
+onMounted(() => {
+  if (!overlayRef.value || !navRef.value) return
+  gsap.from(overlayRef.value, {
+    y: 20,
+    opacity: 0,
+    duration: 0.85,
+    ease: 'power2.out'
+  })
+  gsap.from(navRef.value, {
+    opacity: 0,
+    duration: 0.5,
+    delay: 0.25,
+    ease: 'power2.out'
+  })
+})
+</script>
 
 <style scoped>
 .hero-section {

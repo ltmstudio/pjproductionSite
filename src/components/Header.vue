@@ -1,44 +1,67 @@
 <template>
-  <header class="header">
-    <div class="logo">PJ PRODUCTION</div>
-    <!-- <sup>®</sup> -->
-
-    <!-- Desktop navigation -->
-    <nav class="nav" :class="{ open: isMobileMenuOpen }">
-      <a href="/">ГЛАВНАЯ</a>
-      <a href="#about">О НАС</a>
-      <a href="#work">ВИДЕО И ФОТО</a>
-      <a href="/blog">SMM</a>
-      <a href="#contact">КОНТАКТЫ</a>
+  <header class="header" :class="{ scrolled: isScrolled }">
+    <RouterLink to="/" class="logo">PJ PRODUCTION</RouterLink>
+    <nav class="nav" :class="{ open: isMobileMenuOpen }" aria-label="Основное меню">
+      <RouterLink to="/" class="nav-link" @click="closeMenu">ГЛАВНАЯ</RouterLink>
+      <RouterLink to="/#about" class="nav-link" @click="closeMenu">О НАС</RouterLink>
+      <RouterLink to="/#work" class="nav-link" @click="closeMenu">ВИДЕО И ФОТО</RouterLink>
+      <RouterLink to="/blog" class="nav-link" @click="closeMenu">SMM</RouterLink>
+      <RouterLink to="/#contact" class="nav-link" @click="closeMenu">КОНТАКТЫ</RouterLink>
     </nav>
     <div class="tel-mail">
-      <a class="phone-link" href="tel:+79166462462">
-        <!-- <img src="/pictures/social_media_icons/phon.png" alt="Phone" /> -->
-        <span>+8 916 646 24 62</span>
+      <a class="phone-link" :href="`tel:${siteContacts.phone}`">
+        <span>{{ siteContacts.phoneDisplay }}</span>
       </a>
-
-      <div class="email-wrapper" @click="toggleEmail">
-        <img src="/pictures/social_media_icons/gmail.png" alt="Email" class="mail-icon" />
-        <span v-if="showEmail" class="email-text">pj.production@yandex.ru</span>
+      <div class="email-wrapper" @click="toggleEmail" role="button" tabindex="0" aria-label="Показать email" @keydown.enter="toggleEmail" @keydown.space.prevent="toggleEmail">
+        <img src="/pictures/social_media_icons/gmail.png" alt="" class="mail-icon" />
+        <span v-if="showEmail" class="email-text">{{ siteContacts.email }}</span>
       </div>
     </div>
-
-
-    <!-- Mobile burger -->
-    <div class="burger" @click="toggleMenu">
+    <button type="button" class="burger" aria-label="Открыть меню" :aria-expanded="isMobileMenuOpen" @click="toggleMenu">
       <span :class="{ open: isMobileMenuOpen }"></span>
       <span :class="{ open: isMobileMenuOpen }"></span>
       <span :class="{ open: isMobileMenuOpen }"></span>
-    </div>
+    </button>
   </header>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted, watch } from 'vue'
+import { siteContacts } from '@/config/contacts'
+
 const showEmail = ref(false)
 const isMobileMenuOpen = ref(false)
+const isScrolled = ref(false)
+
+function updateScrolled() {
+  isScrolled.value = window.scrollY > 40
+}
+
+function onEsc(e) {
+  if (e.key === 'Escape') closeMenu()
+}
+
+watch(isMobileMenuOpen, (open) => {
+  document.body.style.overflow = open ? 'hidden' : ''
+  if (open) window.addEventListener('keydown', onEsc)
+  else window.removeEventListener('keydown', onEsc)
+})
+
+onMounted(() => {
+  updateScrolled()
+  window.addEventListener('scroll', updateScrolled, { passive: true })
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll', updateScrolled)
+  document.body.style.overflow = ''
+  window.removeEventListener('keydown', onEsc)
+})
+
 const toggleMenu = () => {
   isMobileMenuOpen.value = !isMobileMenuOpen.value
+}
+const closeMenu = () => {
+  isMobileMenuOpen.value = false
 }
 const toggleEmail = () => {
   showEmail.value = !showEmail.value
@@ -119,13 +142,20 @@ const toggleEmail = () => {
   align-items: center;
   justify-content: space-between;
   z-index: 1000;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.header.scrolled {
+  border-bottom-color: rgba(255, 255, 255, 0.08);
 }
 
 .logo {
   font-size: 20px;
   font-weight: bold;
   letter-spacing: 1px;
-
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav {
@@ -134,17 +164,22 @@ const toggleEmail = () => {
 
 }
 
-.nav a {
+.nav a,
+.nav-link {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 1px;
   transition: opacity 0.3s;
-
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav-link:hover {
   opacity: 0.7;
+}
+
+.nav-link.router-link-active {
+  opacity: 0.9;
 }
 
 .burger {
@@ -152,6 +187,11 @@ const toggleEmail = () => {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  background: none;
+  border: none;
+  padding: 8px;
+  margin: 0;
+  color: inherit;
 }
 
 .burger span {

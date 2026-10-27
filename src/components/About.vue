@@ -1,5 +1,5 @@
 <template>
-    <section id="about" class="about-section">
+    <section id="about" class="about-section" data-scroll-reveal>
         <div class="main-text">
             <h2>ВИДЕО. ФОТО. SMM. <br>ПРОДВИЖЕНИЕ</h2>
         </div>
