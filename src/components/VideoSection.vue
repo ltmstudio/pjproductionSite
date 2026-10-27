@@ -1,5 +1,5 @@
 <template>
-    <section class="video-section" data-scroll-reveal>
+    <section ref="sectionRef" class="video-section" data-scroll-reveal>
         <div class="up">
             <div class="large-text">
                 <h3>СТУДИЯ КРЕАТИВНОГО КОНТЕНТА</h3>
@@ -16,8 +16,9 @@
 
         <div class="video-carousel">
             <transition name="fade" mode="out-in">
-                <video class="youtube-video" autoplay muted loop playsinline :key="currentVideo">
-                    <source :src="currentVideo" type="video/mp4" />
+                <!-- src выставляется только когда блок подходит к экрану: видео не грузится при открытии страницы -->
+                <video class="youtube-video" :src="visible ? currentVideo : undefined" autoplay muted loop playsinline
+                    preload="none" :key="currentVideo">
                     Ваш браузер не поддерживает видео.
                 </video>
             </transition>
@@ -27,7 +28,7 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref, computed, onMounted, onBeforeUnmount } from 'vue'
 
 const videos = [
     '/videos/video_58.mp4',
@@ -35,7 +36,29 @@ const videos = [
 ]
 
 const currentIndex = ref(0)
-const videoRef = ref(null)
+const sectionRef = ref(null)
+const visible = ref(false)
+let observer = null
+
+// грузим видео, только когда блок почти дошёл до экрана
+onMounted(() => {
+    if (!('IntersectionObserver' in window) || !sectionRef.value) {
+        visible.value = true
+        return
+    }
+    observer = new IntersectionObserver(
+        (entries) => {
+            if (entries.some((e) => e.isIntersecting)) {
+                visible.value = true
+                observer.disconnect()
+            }
+        },
+        { rootMargin: '300px 0px' }
+    )
+    observer.observe(sectionRef.value)
+})
+
+onBeforeUnmount(() => observer?.disconnect())
 
 const currentVideo = computed(() => videos[currentIndex.value])
 
