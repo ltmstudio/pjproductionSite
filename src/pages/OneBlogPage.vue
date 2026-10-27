@@ -57,9 +57,6 @@
   const id = computed(() => Number(route.params.id))
   const card = computed(() => DataBlog.find(item => item.id === id.value))
 
-  watch(card, (c) => {
-    if (c?.title) document.title = `${c.title} — PJ Production`
-  }, { immediate: true })
 </script>
   
 
